@@ -1,0 +1,69 @@
+Python 3.8.10 (tags/v3.8.10:3d8993a, May  3 2021, 11:48:03) [MSC v.1928 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> # (TUPLE, SETS AND DICTIONARIES)  HOW DO THEY DIFFER FROM LISTS ?
+>>> my_list = [1, 2, 3, 4]
+>>> print(my_list)
+[1, 2, 3, 4]
+>>> my_list[0] = 10
+>>> print(my_list)
+[10, 2, 3, 4]
+>>> 
+>>> my_list = [1234, 2345, 3456, 4567]
+>>> print(my_list)
+[1234, 2345, 3456, 4567]
+>>> my_list[0] = 2023
+>>> print(my_list)
+[2023, 2345, 3456, 4567]
+>>> 
+>>> my_tuple1 = [1234,2345, 3456, 4567]
+>>> my_tuple2 = ((1, 2, 3, 4))
+>>> print(type(my_tuple1))
+<class 'list'>
+>>> print(len(my_tuple2))
+4
+>>> 
+>>> my_list = (1234, 2345, 3456, 4567)
+>>> my_list[0] = 2023
+Traceback (most recent call last):
+  File "<pyshell#18>", line 1, in <module>
+    my_list[0] = 2023
+TypeError: 'tuple' object does not support item assignment
+>>> # BECAUSE  OF 'TUPLE' OBJECT
+>>> 
+>>> print(my_tuple1[3])
+4567
+>>> print(my_tuple2[2])
+3
+>>> 
+>>> #SETS
+>>> 
+>>> list1 = [1, 2, 3, 4]
+>>> set1 = {1, 2, 3, 4}
+>>> print(list1[0])
+1
+>>> print(set1[0])
+Traceback (most recent call last):
+  File "<pyshell#29>", line 1, in <module>
+    print(set1[0])
+TypeError: 'set' object is not subscriptable
+>>> 
+>>> #DICTIONARY
+>>> 
+>>> list1 = [1, 2, 3, 4, 1234]
+>>> python = {"projects" : 100, "programes" : 1000}
+>>> print(python["programes"])
+1000
+>>> print(python["projects"])
+100
+>>> python = {"projects" : 100,
+	  "programes" : 1000,
+	  "developers" : 10000}
+>>> print(python)
+{'projects': 100, 'programes': 1000, 'developers': 10000}
+>>> print(type(python))
+<class 'dict'>
+>>> print(f" python has a {python['projects']} projects and {python['programes']} programes")
+ python has a 100 projects and 1000 programes
+>>> print(f" python has a {python['projects']} programes and {python['programes']} programes")
+ python has a 100 programes and 1000 programes
+>>> 
